@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mondweiser — Mondkalender für iPhone</title>
+<meta name="description" content="Mondphasen, gute Tage und Widget. Alles offline auf deinem iPhone berechnet. Einmal 0,99 €, kein Abo, keine Werbung, keine Datenerhebung.">
+<meta property="og:title" content="Mondweiser — Mondkalender">
+<meta property="og:description" content="Der Mond, ruhig erklärt. Offline, ohne Abo, ohne Datenerhebung.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0B0D17">
+<style>
+  :root{
+    --bg:#0B0D17; --elev:#151827; --light:#F5F1E8; --muted:#8E93A6;
+    --gold:#C9A86A; --sage:#7D8B74;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--light);
+       font:400 17px/1.65 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
+       -webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:var(--gold)}
+  .wrap{max-width:52rem;margin:0 auto;padding:0 1.5rem}
+
+  /* ---------- Hero ---------- */
+  header{position:relative;text-align:center;padding:clamp(4rem,14vw,9rem) 0 clamp(3rem,8vw,5rem);overflow:hidden}
+  header::before{content:"";position:absolute;inset:-30% -20% auto;height:120vh;
+    background:radial-gradient(closest-side,rgba(245,241,232,.13),transparent 70%);
+    pointer-events:none}
+  .moon{position:relative;width:clamp(140px,34vw,220px);height:clamp(140px,34vw,220px);margin:0 auto 2.5rem;display:block}
+  h1{font-size:clamp(2.3rem,7vw,4rem);line-height:1.05;letter-spacing:-.03em;margin:0 0 1rem;font-weight:600;position:relative}
+  .claim{color:var(--muted);font-size:clamp(1.05rem,2.6vw,1.3rem);margin:0 auto 2.5rem;max-width:26rem;position:relative}
+  .badge{display:inline-block;background:var(--light);color:#0B0D17;text-decoration:none;
+    font-weight:600;padding:.85rem 1.6rem;border-radius:999px;position:relative;
+    transition:transform .2s ease,opacity .2s ease}
+  .badge:hover{transform:translateY(-2px)}
+  .price{display:block;margin-top:1rem;color:var(--muted);font-size:.92rem;position:relative}
+
+  /* ---------- Features ---------- */
+  section{padding:clamp(3rem,8vw,5.5rem) 0}
+  h2{font-size:clamp(1.5rem,4vw,2.1rem);letter-spacing:-.02em;font-weight:600;margin:0 0 2rem}
+  .grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+  .card{background:var(--elev);border-radius:20px;padding:1.5rem}
+  .card h3{margin:0 0 .4rem;font-size:1.05rem;font-weight:600}
+  .card p{margin:0;color:#C7C4BD;font-size:.97rem;line-height:1.55}
+
+  /* ---------- Honest block ---------- */
+  .honest{background:var(--elev);border-radius:24px;padding:clamp(1.75rem,5vw,2.75rem)}
+  .honest h2{margin-top:0}
+  .honest p{color:#C7C4BD;margin:0 0 1rem}
+  .honest p:last-child{margin-bottom:0}
+  .tag{display:inline-block;border:1px solid var(--sage);color:var(--sage);
+    border-radius:999px;padding:.2rem .7rem;font-size:.78rem;letter-spacing:.04em;
+    text-transform:uppercase;margin-bottom:1rem}
+
+  footer{padding:3rem 0 4rem;border-top:1px solid #23273a;color:var(--muted);font-size:.9rem;
+    display:flex;flex-wrap:wrap;gap:1rem 1.5rem;justify-content:space-between;align-items:center}
+  footer a{color:var(--muted);text-decoration:none}
+  footer a:hover{color:var(--light)}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <svg class="moon" viewBox="0 0 200 200" role="img" aria-label="Mond bei partieller Finsternis">
+    <defs>
+      <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+        <stop offset="55%" stop-color="#F5F1E8" stop-opacity=".22"/>
+        <stop offset="100%" stop-color="#F5F1E8" stop-opacity="0"/>
+      </radialGradient>
+      <radialGradient id="disc" cx="42%" cy="38%" r="72%">
+        <stop offset="0%" stop-color="#FFFDF7"/>
+        <stop offset="70%" stop-color="#EFE9DC"/>
+        <stop offset="100%" stop-color="#D8D2C4"/>
+      </radialGradient>
+      <clipPath id="clip"><circle cx="100" cy="100" r="62"/></clipPath>
+    </defs>
+    <circle cx="100" cy="100" r="98" fill="url(#glow)"/>
+    <circle cx="100" cy="100" r="62" fill="url(#disc)"/>
+    <g clip-path="url(#clip)" opacity=".14" fill="#8A8578">
+      <circle cx="78" cy="76" r="17"/>
+      <circle cx="118" cy="118" r="22"/>
+      <circle cx="72" cy="126" r="12"/>
+    </g>
+    <g clip-path="url(#clip)">
+      <circle cx="46" cy="126" r="76" fill="#8A4B3C" opacity=".93"/>
+    </g>
+    <circle cx="100" cy="100" r="62" fill="none" stroke="#F5F1E8" stroke-opacity=".12"/>
+  </svg>
+
+  <h1>Mondweiser</h1>
+  <p class="claim">Der Mond, ruhig erklärt. Mondphasen, gute Tage und ein Widget, das immer funktioniert.</p>
+  <!-- TODO Alexander: App-Store-Link eintragen, sobald die App live ist -->
+  <a class="badge" href="https://apps.apple.com/de/app/id6795456788">Im App&nbsp;Store laden</a>
+  <span class="price">Einmal 0,99 €. Kein Abo, keine Werbung.</span>
+</header>
+
+<main>
+<div class="wrap">
+
+  <section>
+    <h2>Was drin ist</h2>
+    <div class="grid">
+      <div class="card"><h3>Phase, Zeichen, Zeiten</h3><p>Mondphase, Mondzeichen und Auf- und Untergang für deinen Ort — auf dem Gerät berechnet, auf die Minute genau.</p></div>
+      <div class="card"><h3>Kalender ohne Ende</h3><p>Alle Voll- und Neumonde, beliebig weit voraus. Kein Nachladen, kein Limit.</p></div>
+      <div class="card"><h3>Gute Tage</h3><p>Für Garten, Haare, Küche, Haus und Ruhe — mit ehrlicher Einordnung statt Versprechen.</p></div>
+      <div class="card"><h3>Widget</h3><p>Für Home- und Sperrbildschirm. Funktioniert immer, auch im Flugmodus.</p></div>
+      <div class="card"><h3>Siri</h3><p>„Wie steht der Mond?" — auch als Kurzbefehl in eigene Abläufe einbaubar.</p></div>
+      <div class="card"><h3>Notizen und Termine</h3><p>Tagesnotizen für Neumond-Vorsätze und Vollmond-Rückblicke. Mondtermine auf Wunsch im eigenen Kalender.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="honest">
+      <span class="tag">Ehrlich gesagt</span>
+      <h2>Was Mondweiser nicht ist</h2>
+      <p>Die astronomischen Daten sind berechnet und überprüfbar. Die Hinweise im Mond-Guide geben traditionelle Überlieferung wieder — wissenschaftlich belegt ist sie nicht. Die App sagt das deutlich, an Ort und Stelle, damit du selbst entscheidest, was du mitnimmst.</p>
+      <p>Und: keine Anmeldung, keine Serververbindung, keine Analyse-Tools. Im App Store steht bei Mondweiser „Daten werden nicht erhoben" — das ist keine Formulierung, sondern der Grund, warum die App offline funktioniert.</p>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<div class="wrap">
+  <footer>
+    <span>© 2026 Alexander Skowronek</span>
+    <span>
+      <a href="support.html">Support</a> ·
+      <a href="datenschutz.html">Datenschutz</a> ·
+      <a href="impressum.html">Impressum</a>
+    </span>
+  </footer>
+</div>
+
+</body>
+</html>
