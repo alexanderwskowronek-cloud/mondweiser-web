@@ -63,30 +63,30 @@
 <body>
 
 <header>
-  <svg class="moon" viewBox="0 0 200 200" role="img" aria-label="Mond bei partieller Finsternis">
+  <svg class="moon" viewBox="0 0 200 200" role="img" aria-label="Zunehmender Mond">
     <defs>
       <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-        <stop offset="55%" stop-color="#F5F1E8" stop-opacity=".22"/>
+        <stop offset="50%" stop-color="#F5F1E8" stop-opacity=".20"/>
         <stop offset="100%" stop-color="#F5F1E8" stop-opacity="0"/>
       </radialGradient>
-      <radialGradient id="disc" cx="42%" cy="38%" r="72%">
+      <radialGradient id="disc" cx="60%" cy="38%" r="78%">
         <stop offset="0%" stop-color="#FFFDF7"/>
-        <stop offset="70%" stop-color="#EFE9DC"/>
-        <stop offset="100%" stop-color="#D8D2C4"/>
+        <stop offset="65%" stop-color="#EFE9DC"/>
+        <stop offset="100%" stop-color="#D9D3C5"/>
+      </radialGradient>
+      <!-- Der Terminator: weicher Übergang in die Nachtseite, nicht in Kupfer.
+           Kupfer wäre eine Finsternis — hier ist es schlicht die Phasengrenze. -->
+      <radialGradient id="shadow" cx="50%" cy="50%" r="50%">
+        <stop offset="88%" stop-color="#0B0D17" stop-opacity="1"/>
+        <stop offset="100%" stop-color="#0B0D17" stop-opacity="0"/>
       </radialGradient>
       <clipPath id="clip"><circle cx="100" cy="100" r="62"/></clipPath>
     </defs>
     <circle cx="100" cy="100" r="98" fill="url(#glow)"/>
     <circle cx="100" cy="100" r="62" fill="url(#disc)"/>
-    <g clip-path="url(#clip)" opacity=".14" fill="#8A8578">
-      <circle cx="78" cy="76" r="17"/>
-      <circle cx="118" cy="118" r="22"/>
-      <circle cx="72" cy="126" r="12"/>
-    </g>
     <g clip-path="url(#clip)">
-      <circle cx="46" cy="126" r="76" fill="#8A4B3C" opacity=".93"/>
+      <circle cx="62" cy="100" r="60" fill="url(#shadow)"/>
     </g>
-    <circle cx="100" cy="100" r="62" fill="none" stroke="#F5F1E8" stroke-opacity=".12"/>
   </svg>
 
   <h1>Mondweiser</h1>
