@@ -4,10 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lunify — Mondkalender für iPhone</title>
-<meta name="description" content="Mondphasen, gute Tage und Widget. Alles offline auf deinem iPhone berechnet. Keine Werbung, keine Datenerhebung.">
+<meta name="description" content="Lunify ist ein Mondkalender für iPhone: Mondphase, Mondzeichen, Mondauf- und Monduntergang und gute Tage nach dem Bauernkalender. Offline, ohne Werbung.">
+<link rel="canonical" href="https://alexanderwskowronek-cloud.github.io/mondweiser-web/">
+<meta name="apple-itunes-app" content="app-id=6795456788">
 <meta property="og:title" content="Lunify — Mondkalender">
 <meta property="og:description" content="Der Mond, ruhig erklärt. Offline, ohne Datenerhebung.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://alexanderwskowronek-cloud.github.io/mondweiser-web/">
+<meta property="og:locale" content="de_DE">
 <meta name="theme-color" content="#0B0D17">
 <style>
   :root{
@@ -59,6 +63,29 @@
   footer a:hover{color:var(--light)}
   @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "MobileApplication",
+ "name": "Lunify — Mondkalender",
+ "operatingSystem": "iOS",
+ "applicationCategory": "WeatherApplication",
+ "url": "https://apps.apple.com/de/app/id6795456788",
+ "inLanguage": [
+  "de",
+  "en"
+ ],
+ "description": "Lunify ist eine Mondkalender-App für iPhone von Alexander Skowronek, die Mondphase, Mondzeichen sowie Mondauf- und Monduntergang für deinen Ort direkt auf dem Gerät berechnet.",
+ "publisher": {
+  "@type": "Person",
+  "name": "Alexander Skowronek"
+ },
+ "author": {
+  "@type": "Person",
+  "name": "Alexander Skowronek"
+ }
+}
+</script>
 </head>
 <body>
 
@@ -112,6 +139,15 @@
   </section>
 
   <section>
+    <h2>Ratgeber rund um den Mond</h2>
+    <div class="grid">
+      <div class="card"><h3><a href="ratgeber/vollmond-neumond-2026-2027.html">Vollmond 2026 und 2027</a></h3><p>Alle Voll- und Neumondtermine mit Uhrzeit für Deutschland.</p></div>
+      <div class="card"><h3><a href="ratgeber/mondphasen-erklaert.html">Mondphasen erklärt</a></h3><p>Sichel, Halbmond, Vollmond und warum der Mond tagsüber zu sehen ist.</p></div>
+      <div class="card"><h3><a href="ratgeber/index.html">Alle Ratgeber</a></h3><p>Mondkalender für Dezember und Januar, Supermond und Blutmond.</p></div>
+    </div>
+  </section>
+
+  <section>
     <div class="honest">
       <span class="tag">Ehrlich gesagt</span>
       <h2>Was Lunify nicht ist</h2>
@@ -127,6 +163,8 @@
   <footer>
     <span>© 2026 Lunify</span>
     <span>
+      <a href="ratgeber/index.html">Ratgeber</a> ·
+      <a href="faq.html">FAQ</a> ·
       <a href="support.html">Support</a> ·
       <a href="datenschutz.html">Datenschutz</a> ·
       <a href="impressum.html">Impressum</a>
