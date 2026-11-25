@@ -1,68 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Lunify — Mondkalender für iPhone</title>
 <meta name="description" content="Lunify ist ein Mondkalender für iPhone: Mondphase, Mondzeichen, Mondauf- und Monduntergang und gute Tage nach dem Bauernkalender. Funktioniert offline.">
-<link rel="canonical" href="https://alexanderwskowronek-cloud.github.io/mondweiser-web/">
 <meta name="apple-itunes-app" content="app-id=6795456788">
-<meta property="og:title" content="Lunify — Mondkalender">
-<meta property="og:description" content="Der Mond, ruhig erklärt. Offline, ohne Datenerhebung.">
+<meta name="theme-color" content="#F7F6F2">
+<link rel="canonical" href="https://larkminds.com/mondweiser-web/">
+<meta property="og:site_name" content="Larkminds">
+<meta property="og:title" content="Lunify — Mondkalender für iPhone">
+<meta property="og:description" content="Lunify ist ein Mondkalender für iPhone: Mondphase, Mondzeichen, Mondauf- und Monduntergang und gute Tage nach dem Bauernkalender. Funktioniert offline.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://alexanderwskowronek-cloud.github.io/mondweiser-web/">
+<meta property="og:url" content="https://larkminds.com/mondweiser-web/">
 <meta property="og:locale" content="de_DE">
-<meta name="theme-color" content="#0B0D17">
-<style>
-  :root{
-    --bg:#0B0D17; --elev:#151827; --light:#F5F1E8; --muted:#8E93A6;
-    --gold:#C9A86A; --sage:#7D8B74;
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{margin:0;background:var(--bg);color:var(--light);
-       font:400 17px/1.65 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
-       -webkit-font-smoothing:antialiased;overflow-x:hidden}
-  a{color:var(--gold)}
-  .wrap{max-width:52rem;margin:0 auto;padding:0 1.5rem}
-
-  /* ---------- Hero ---------- */
-  header{position:relative;text-align:center;padding:clamp(4rem,14vw,9rem) 0 clamp(3rem,8vw,5rem);overflow:hidden}
-  header::before{content:"";position:absolute;inset:-30% -20% auto;height:120vh;
-    background:radial-gradient(closest-side,rgba(245,241,232,.13),transparent 70%);
-    pointer-events:none}
-  .moon{position:relative;width:clamp(140px,34vw,220px);height:clamp(140px,34vw,220px);margin:0 auto 2.5rem;display:block}
-  h1{font-size:clamp(2.3rem,7vw,4rem);line-height:1.05;letter-spacing:-.03em;margin:0 0 1rem;font-weight:600;position:relative}
-  .claim{color:var(--muted);font-size:clamp(1.05rem,2.6vw,1.3rem);margin:0 auto 2.5rem;max-width:26rem;position:relative}
-  .badge{display:inline-block;background:var(--light);color:#0B0D17;text-decoration:none;
-    font-weight:600;padding:.85rem 1.6rem;border-radius:999px;position:relative;
-    transition:transform .2s ease,opacity .2s ease}
-  .badge:hover{transform:translateY(-2px)}
-  .price{display:block;margin-top:1rem;color:var(--muted);font-size:.92rem;position:relative}
-
-  /* ---------- Features ---------- */
-  section{padding:clamp(3rem,8vw,5.5rem) 0}
-  h2{font-size:clamp(1.5rem,4vw,2.1rem);letter-spacing:-.02em;font-weight:600;margin:0 0 2rem}
-  .grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
-  .card{background:var(--elev);border-radius:20px;padding:1.5rem}
-  .card h3{margin:0 0 .4rem;font-size:1.05rem;font-weight:600}
-  .card p{margin:0;color:#C7C4BD;font-size:.97rem;line-height:1.55}
-
-  /* ---------- Honest block ---------- */
-  .honest{background:var(--elev);border-radius:24px;padding:clamp(1.75rem,5vw,2.75rem)}
-  .honest h2{margin-top:0}
-  .honest p{color:#C7C4BD;margin:0 0 1rem}
-  .honest p:last-child{margin-bottom:0}
-  .tag{display:inline-block;border:1px solid var(--sage);color:var(--sage);
-    border-radius:999px;padding:.2rem .7rem;font-size:.78rem;letter-spacing:.04em;
-    text-transform:uppercase;margin-bottom:1rem}
-
-  footer{padding:3rem 0 4rem;border-top:1px solid #23273a;color:var(--muted);font-size:.9rem;
-    display:flex;flex-wrap:wrap;gap:1rem 1.5rem;justify-content:space-between;align-items:center}
-  footer a{color:var(--muted);text-decoration:none}
-  footer a:hover{color:var(--light)}
-  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
-</style>
+<meta property="og:image" content="https://larkminds.com/assets/larkminds-og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/mark.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/app.css">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -88,42 +46,73 @@
 </script>
 </head>
 <body>
-
-<header>
-  <svg class="moon" viewBox="0 0 200 200" role="img" aria-label="Zunehmender Mond">
+<a class="skip" href="#inhalt">Zum Inhalt</a>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="https://larkminds.com/" aria-label="Larkminds, Startseite"><svg viewBox="0 0 190 50" aria-hidden="true"><text x="4" y="38" font-family="-apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif" font-size="34" font-weight="600" letter-spacing="-1.2" fill="currentColor">larkmınds</text><circle cx="106" cy="11" r="4.8" fill="#E8663D"></circle></svg></a>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="/#apps">Alle Apps</a>
+      <a href="/mondweiser-web/support.html">Support</a>
+      <a class="opt" href="/mondweiser-web/datenschutz.html">Datenschutz</a>
+      
+    </nav>
+  </div>
+</header>
+<div class="app-leiste" style="--app:#4B5DA8">
+  <div class="wrap">
+    <a class="app-name" href="/mondweiser-web/"><img src="/assets/apps/lunify.webp" alt="" width="32" height="32" decoding="async">Lunify</a>
+    <nav class="app-nav" aria-label="App-Navigation"><a href="/mondweiser-web/" aria-current="page">Übersicht</a><a href="/mondweiser-web/support.html">Hilfe</a><a href="/mondweiser-web/faq.html">Fragen</a><a href="/mondweiser-web/ratgeber/">Ratgeber</a><a href="/mondweiser-web/datenschutz.html">Datenschutz</a></nav>
+    
+  </div>
+</div>
+<main id="inhalt">
+  <section class="app-held" aria-labelledby="app-titel">
+    <div class="wrap">
+      <img src="/assets/apps/lunify.webp" alt="App-Icon von Lunify" width="96" height="96" decoding="async">
+      <div>
+        <p class="eyebrow">Lunify</p>
+        <h1 id="app-titel">Lunify</h1>
+        <p class="nutzen">Der Mondkalender für iPhone: Mondphase, Mondzeichen, Mondauf- und Monduntergang für deinen Ort und ein Monatskalender.</p>
+        <a class="knopf store" href="https://apps.apple.com/de/app/id6795456788">Im App Store laden<span class="vh"> – Lunify</span></a>
+      </div>
+    </div>
+  </section>
+  <div class="wrap app-inhalt">
+<div class="kopf-alt">
+  <svg class="moon" viewbox="0 0 200 200" role="img" aria-label="Zunehmender Mond">
     <defs>
-      <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-        <stop offset="50%" stop-color="#F5F1E8" stop-opacity=".20"/>
-        <stop offset="100%" stop-color="#F5F1E8" stop-opacity="0"/>
-      </radialGradient>
-      <radialGradient id="disc" cx="60%" cy="38%" r="78%">
-        <stop offset="0%" stop-color="#FFFDF7"/>
-        <stop offset="65%" stop-color="#EFE9DC"/>
-        <stop offset="100%" stop-color="#D9D3C5"/>
-      </radialGradient>
+      <radialgradient id="glow" cx="50%" cy="50%" r="50%">
+        <stop offset="50%" stop-color="#F5F1E8" stop-opacity=".20"></stop>
+        <stop offset="100%" stop-color="#F5F1E8" stop-opacity="0"></stop>
+      </radialgradient>
+      <radialgradient id="disc" cx="60%" cy="38%" r="78%">
+        <stop offset="0%" stop-color="#FFFDF7"></stop>
+        <stop offset="65%" stop-color="#EFE9DC"></stop>
+        <stop offset="100%" stop-color="#D9D3C5"></stop>
+      </radialgradient>
       <!-- Der Terminator: weicher Übergang in die Nachtseite, nicht in Kupfer.
            Kupfer wäre eine Finsternis — hier ist es schlicht die Phasengrenze. -->
-      <radialGradient id="shadow" cx="50%" cy="50%" r="50%">
-        <stop offset="88%" stop-color="#0B0D17" stop-opacity="1"/>
-        <stop offset="100%" stop-color="#0B0D17" stop-opacity="0"/>
-      </radialGradient>
-      <clipPath id="clip"><circle cx="100" cy="100" r="62"/></clipPath>
+      <radialgradient id="shadow" cx="50%" cy="50%" r="50%">
+        <stop offset="88%" stop-color="#0B0D17" stop-opacity="1"></stop>
+        <stop offset="100%" stop-color="#0B0D17" stop-opacity="0"></stop>
+      </radialgradient>
+      <clippath id="clip"><circle cx="100" cy="100" r="62"></circle></clippath>
     </defs>
-    <circle cx="100" cy="100" r="98" fill="url(#glow)"/>
-    <circle cx="100" cy="100" r="62" fill="url(#disc)"/>
+    <circle cx="100" cy="100" r="98" fill="url(#glow)"></circle>
+    <circle cx="100" cy="100" r="62" fill="url(#disc)"></circle>
     <g clip-path="url(#clip)">
-      <circle cx="62" cy="100" r="60" fill="url(#shadow)"/>
+      <circle cx="62" cy="100" r="60" fill="url(#shadow)"></circle>
     </g>
   </svg>
 
-  <h1>Lunify</h1>
+  
   <p class="claim">Der Mond, ruhig erklärt. Mondphasen, gute Tage und ein Widget, das immer funktioniert.</p>
   <a class="badge" href="https://apps.apple.com/de/app/id6795456788">Im App&nbsp;Store laden</a>
   <span class="price">Kein Konto nötig.</span>
-</header>
+</div>
 
-<main>
-<div class="wrap">
+
+
 
   <section>
     <h2>Was drin ist</h2>
@@ -155,22 +144,13 @@
       <p>Und: Zum Rechnen braucht die App weder Anmeldung noch Serververbindung. Im App Store steht bei Lunify „Daten werden nicht erhoben".</p>
     </div>
   </section>
-
-</div>
+  </div>
 </main>
-
-<div class="wrap">
-  <footer>
-    <span>© 2026 Lunify</span>
-    <span>
-      <a href="ratgeber/index.html">Ratgeber</a> ·
-      <a href="faq.html">FAQ</a> ·
-      <a href="support.html">Support</a> ·
-      <a href="datenschutz.html">Datenschutz</a> ·
-      <a href="impressum.html">Impressum</a>
-    </span>
-  </footer>
-</div>
-
+<footer class="foot">
+  <div class="wrap">
+    <span>© 2026 Larkminds</span>
+    <nav aria-label="Rechtliches"><a href="/mondweiser-web/impressum.html">Impressum</a><a href="/mondweiser-web/datenschutz.html">Datenschutz</a><a href="/mondweiser-web/support.html">Support</a><a href="mailto:support@larkminds.com">support@larkminds.com</a><a href="https://larkminds.com/">larkminds.com</a></nav>
+  </div>
+</footer>
 </body>
 </html>
